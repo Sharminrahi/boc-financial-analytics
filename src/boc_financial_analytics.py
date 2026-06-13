@@ -397,6 +397,8 @@ def generate_summary_report(
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    import os
+    os.makedirs("data", exist_ok=True)
     import json
 
     print("=" * 60)
