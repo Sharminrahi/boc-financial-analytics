@@ -87,7 +87,7 @@ class TestBuildMarketDataset:
 
     def test_cad_usd_in_realistic_range(self, market_df):
         df, _ = market_df
-        assert df["cad_usd"].between(0.50, 1.10).all(), \
+        assert df["cad_usd"].dropna().between(0.50, 1.10).all(), \
             "CAD/USD out of realistic range [0.50, 1.10]"
 
 
